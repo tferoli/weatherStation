@@ -1,0 +1,11 @@
+{
+	"event": "wundergroundtide_webhook",
+	"url": "http://api.wunderground.com/api/*KEY*/rawtide/q/*STATE*/*CITY*.json",
+	"requestType": "GET",
+	"headers": {
+		"Content-Type": "application/json"
+		},
+	"responseTemplate": "{{#rawtide}}{{#rawTideObs.0}}{{height}}~{{/rawTideObs.0}}{{#rawTideStats.0}}{{maxheight}}~{{minheight}}{{/rawTideStats.0}}~{{/rawtide}}",
+	"query": "exclude=response",
+	"mydevices": true
+}
