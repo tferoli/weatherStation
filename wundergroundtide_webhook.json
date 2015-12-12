@@ -1,6 +1,6 @@
 {
 	"event": "wundergroundtide_webhook",
-	"url": "http://api.wunderground.com/api/*KEY*/rawtide/q/*STATE*/*CITY*.json",
+	"url": "http://api.wunderground.com/api/*APIKEY*/rawtide/q/*STATE*/*CITY*.json",
 	"requestType": "GET",
 	"headers": {
 		"Content-Type": "application/json"

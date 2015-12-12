@@ -1,11 +1,11 @@
 {
 	"event": "forecastio_webhook",
-	"url": "https://api.forecast.io/forecast/*KEY*/*LAT.XX*,*LON.XX*",
+	"url": "https://api.forecast.io/forecast/*APIKEY*/*LAT,*LON*",
 	"requestType": "GET",
 	"headers": {
 		"Content-Type": "application/json"
 		},
-	"responseTemplate": "{{#currently}}{{temperature}}~{{humidity}}~{{pressure}}~{{precipProbability}}~{{windSpeed}}~{{windBearing}}~{{/currently}}{{#daily}}{{#data.0}}{{temperatureMax}}~{{temperatureMin}}~{{humidity}}~{{pressure}}~{{precipProbability}}~{{windSpeed}}~{{windBearing}}~{{/data.0}}{{#data.1}}{{temperatureMax}}~{{temperatureMin}}~{{humidity}}~{{pressure}}~{{precipProbability}}~{{windSpeed}}~{{windBearing}}~{{/data.1}}{{#data.2}}{{temperatureMax}}~{{temperatureMin}}~{{humidity}}~{{pressure}}~{{precipProbability}}~{{windSpeed}}~{{windBearing}}~{{/data.2}}{{/daily}}{{#alerts.0}}{{time}}~{{/alerts.0}}",
+	"responseTemplate": "{{offset}}~{{#currently}}{{temperature}}~{{humidity}}~{{pressure}}~{{precipProbability}}~{{windSpeed}}~{{windBearing}}~{{/currently}}{{#daily}}{{#data.0}}{{temperatureMax}}~{{temperatureMin}}~{{precipProbability}}~{{windBearing}}~{{/data.0}}{{#data.1}}{{temperatureMax}}~{{temperatureMin}}~{{precipProbability}}~{{windBearing}}~{{/data.1}}{{#data.2}}{{temperatureMax}}~{{temperatureMin}}~{{precipProbability}}~{{windBearing}}~{{/data.2}}{{/daily}}{{#alerts.0}}{{time}}~{{/alerts.0}}",
 	"query": "exclude=minutely,hourly,flags",
 	"mydevices": true
 }
